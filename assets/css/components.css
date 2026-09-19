@@ -1,0 +1,285 @@
+/* =========================================================
+   Shyam Sunder Portfolio
+   Reusable Components
+   ========================================================= */
+
+
+/* =========================================================
+   1. Navigation Components
+   ========================================================= */
+
+.nav-logo {
+    position: relative;
+}
+
+.nav-logo::after {
+    content: "";
+    display: inline-block;
+
+    width: 6px;
+    height: 6px;
+
+    margin-left: 5px;
+
+    background: var(--accent);
+    border-radius: 50%;
+
+    vertical-align: middle;
+}
+
+.nav-menu a {
+    position: relative;
+}
+
+.nav-menu a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--accent);
+
+    transition: width var(--transition);
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   2. Section Dividers
+   ========================================================= */
+
+.section-heading {
+    position: relative;
+}
+
+.section-heading::after {
+    content: "";
+
+    display: block;
+
+    width: 50px;
+    height: 3px;
+
+    margin-top: 18px;
+
+    background: var(--accent);
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   3. Technology Badges
+   ========================================================= */
+
+.technology-list span,
+.project-technologies span {
+    cursor: default;
+}
+
+
+/* =========================================================
+   4. Card Hover Indicator
+   ========================================================= */
+
+.snapshot-card,
+.architecture-card,
+.experience-preview,
+.project-preview {
+    position: relative;
+    overflow: hidden;
+}
+
+.snapshot-card::before,
+.architecture-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--accent);
+
+    transition: width var(--transition);
+}
+
+.snapshot-card:hover::before,
+.architecture-card:hover::before {
+    width: 100%;
+}
+
+
+/* =========================================================
+   5. Architecture Cards
+   ========================================================= */
+
+.architecture-card {
+    cursor: pointer;
+}
+
+.architecture-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.architecture-card h3::before {
+    content: "→";
+
+    color: var(--accent);
+
+    font-size: 1rem;
+
+    transition: transform var(--transition);
+}
+
+.architecture-card:hover h3::before {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   6. Project Technology Tags
+   ========================================================= */
+
+.project-technologies span {
+    transition:
+        border-color var(--transition),
+        color var(--transition),
+        background var(--transition);
+}
+
+.project-technologies span:hover {
+    color: var(--accent);
+
+    border-color: var(--accent);
+
+    background: rgba(56, 189, 248, 0.05);
+}
+
+
+/* =========================================================
+   7. Certification Items
+   ========================================================= */
+
+.certification-list p {
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+}
+
+.certification-list p:hover {
+    transform: translateX(5px);
+
+    background: rgba(56, 189, 248, 0.04);
+
+    border-color: var(--accent);
+}
+
+
+/* =========================================================
+   8. Links
+   ========================================================= */
+
+.experience-summary a,
+.project-preview > a,
+.architecture-link,
+.certifications-preview > a {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+}
+
+.experience-summary a:hover,
+.project-preview > a:hover,
+.architecture-link:hover,
+.certifications-preview > a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+
+/* =========================================================
+   9. Contact Links
+   ========================================================= */
+
+.contact-links a {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-links a::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(56, 189, 248, 0.05);
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform var(--transition);
+}
+
+.contact-links a:hover::before {
+    transform: scaleX(1);
+}
+
+.contact-links a {
+    z-index: 1;
+}
+
+.contact-links a::before {
+    z-index: -1;
+}
+
+
+/* =========================================================
+   10. Resume Button
+   ========================================================= */
+
+.hero-actions .btn:last-child {
+    position: relative;
+}
+
+.hero-actions .btn:last-child::after {
+    content: "↗";
+
+    margin-left: 8px;
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   11. Focus Accessibility
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   12. Selection
+   ========================================================= */
+
+::selection {
+    background: var(--accent);
+    color: #06111a;
+}
