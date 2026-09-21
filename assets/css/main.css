@@ -90,7 +90,7 @@ section {
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 100px 24px;
+    padding: 50px 30px;
 }
 
 .section-heading {
@@ -607,7 +607,8 @@ section {
    ========================================================= */
 
 .certifications-page {
-    padding: 70px 0 90px;
+    padding: 30px 0 50px;
+
 }
 
 .section-label {
@@ -892,6 +893,108 @@ section {
         flex-direction: column;
     }
 
+}
+
+/* =========================================================
+   Education Section
+   ========================================================= */
+
+.education-section {
+    background: var(--bg-secondary);
+    padding-top: 30px;   /* smaller gap above */
+    padding-bottom: 60px; /* balanced spacing below */
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--accent);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 20px;
+    position: relative;
+    width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-content {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: var(--radius-medium);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.timeline-content h3 {
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+}
+
+.timeline-content p {
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.timeline-content ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    right: -9px;
+    background-color: var(--accent);
+    border: 3px solid var(--bg-secondary);
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -9px;
+}
+
+/* 📱 Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 20px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 40px;
+        margin-bottom: 40px;
+    }
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    .timeline-item::before {
+        left: 0;
+    }
 }
 
 
