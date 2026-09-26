@@ -81,7 +81,7 @@
                 View Experience
             </a>
 
-            <a href="projects/" class="btn btn-secondary">
+            <a href="#projects" class="btn btn-secondary">
                 View Projects
             </a>
 
@@ -168,10 +168,10 @@
 
                 <span>AWS</span>
                 <span>GCP</span>
+                <span>Terraform</span>
                 <span>Kubernetes</span>
                 <span>Docker</span>
                 <span>Jenkins</span>
-                <span>Terraform</span>
                 <span>Ansible</span>
                 <span>Linux</span>
                 <span>Git</span>
@@ -180,6 +180,8 @@
                 <span>Shell</span>
                 <span>Grafana</span>
                 <span>SonarQube</span>
+                <span>Black Duck</span>
+                <span>Fortify</span>
                 <span>JFrog Artifactory</span>
 
             </div>
@@ -223,10 +225,12 @@
                 <div class="experience-summary">
 
                     <p>
-                        Working across cloud infrastructure, CI/CD,
-                        containerization, application deployment,
-                        monitoring and automation for enterprise
-                        applications.
+                        SRE / DevOps Engineer at Infosys, supporting enterprise
+                        applications for GE Appliances across AWS and GCP.
+                        Work includes CI/CD automation, cloud infrastructure,
+                        Kubernetes, Docker, Jenkins, Terraform, application
+                        deployment, security scanning, monitoring and SRE
+                        production-readiness activities.
                     </p>
 
                     <a href="experience/index.html">
@@ -241,45 +245,109 @@
 
 
         <!-- =========================
-             Featured Project
-        ========================== -->
-        <section id="projects" class="featured-project">
+     Personal Projects
+========================== -->
+<section id="projects" class="featured-project">
 
-            <div class="section-heading">
+    <div class="section-heading">
 
-                <p class="section-label">
-                    Featured Project
+        <p class="section-label">
+            Personal Projects
+        </p>
+
+        <h2>
+            Hands-On DevOps Projects
+        </h2>
+
+    </div>
+
+    <div class="project-grid">
+
+        <!-- Jenkins CI/CD Project -->
+        <a href="projects/jenkins-springboot-cicd-pipeline/"
+           class="project-card">
+
+            <div class="project-card-content">
+
+                <p class="project-number">
+                    Project 01
                 </p>
 
-                <h2>
-                    Kubernetes Microservices Deployment
-                </h2>
-
-            </div>
-
-            <div class="project-preview">
+                <h3>
+                    End-to-End Jenkins CI/CD Pipeline
+                </h3>
 
                 <p>
-                    A Java-based three-tier microservices application
+                    Automated CI/CD pipeline for a Spring Boot
+                    application covering source-code checkout,
+                    Maven testing, SonarQube analysis, Quality Gate
+                    validation, Docker image creation, Trivy
+                    vulnerability scanning and Docker Hub publishing.
+                </p>
+
+                <div class="project-technologies">
+
+                    <span>Terraform</span>
+                    <span>AWS EC2</span>
+                    <span>Jenkins</span>
+                    <span>Maven</span>
+                    <span>Java 21</span>
+                    <span>Spring Boot</span>
+                    <span>SonarQube</span>
+                    <span>Docker</span>
+                    <span>Trivy</span>
+
+                </div>
+
+                <span class="project-link">
+                    View Project →
+                </span>
+
+            </div>
+        </a>
+
+
+        <!-- Kubernetes Project -->
+        <a href="projects/kubernetes-microservices/"
+           class="project-card">
+
+            <div class="project-card-content">
+
+                <p class="project-number">
+                    Project 02
+                </p>
+
+                <h3>
+                    Microservices Deployment on Kubernetes
+                </h3>
+
+                <p>
+                    Three-tier Java-based microservices application
                     deployed on Kubernetes using Docker, Maven,
                     Kubernetes Services and YAML manifests.
                 </p>
 
                 <div class="project-technologies">
+
                     <span>Java</span>
                     <span>Maven</span>
                     <span>Docker</span>
                     <span>Kubernetes</span>
                     <span>Minikube</span>
+
                 </div>
 
-                <a href="projects/kubernetes-microservices/">
+                <span class="project-link">
                     View Project →
-                </a>
+                </span>
 
             </div>
 
-        </section>
+        </a>
+
+    </div>
+
+</section>
 
 
         <!-- =========================

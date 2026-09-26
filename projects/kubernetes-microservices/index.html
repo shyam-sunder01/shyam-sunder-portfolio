@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Microservices Deployment on Kubernetes using Docker, Maven, Java and Minikube."
+    >
+
+    <title>Microservices Deployment on Kubernetes | Shyam Sunder</title>
+
+    <link
+        rel="stylesheet"
+        href="../../assets/css/main.css"
+    >
+
+</head>
+
+<body class="project-page">
+
+    <!-- =========================
+         Navigation
+    ========================== -->
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a
+                href="../../index.html"
+                class="nav-logo"
+            >
+                Shyam Sunder
+            </a>
+
+            <button
+                class="nav-toggle"
+                type="button"
+                aria-label="Toggle navigation"
+            >
+                ☰
+            </button>
+
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="../../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../../about/">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../../index.html#experience">
+                        Experience
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../../index.html#skills">
+                        Skills
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../../education/index.html">
+                        Education
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../../index.html#architecture">
+                        Architecture
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../../index.html#certifications">
+                        Certifications
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../../index.html#contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         Project Hero
+    ========================== -->
+    <main>
+
+        <section class="project-hero">
+
+            <p class="section-label">
+                Personal Project
+            </p>
+
+            <h1>
+                Microservices Deployment on Kubernetes
+            </h1>
+
+            <p class="project-hero-description">
+                A containerized Java microservices application deployed on
+                Kubernetes using Minikube. The project demonstrates
+                microservice packaging with Maven, Docker image creation,
+                Kubernetes Deployments and Services, service-to-service
+                communication, health checks, and container orchestration.
+            </p>
+
+            <div class="project-actions">
+
+                <a
+                    href="https://github.com/shyam-sunder01/Microservices-Deployment-on-Kubernetes"
+                    class="project-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View on GitHub
+                </a>
+
+                <a
+                    href="../../index.html#projects"
+                    class="project-button secondary"
+                >
+                    ← Back to Projects
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Project Overview
+        ========================== -->
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Overview
+                </p>
+
+                <h2>
+                    Project Overview
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    This project demonstrates the deployment of a
+                    containerized Java microservices application on a
+                    Kubernetes cluster running through Minikube.
+                </p>
+
+                <p>
+                    The application consists of three independently packaged
+                    services: <strong>Shopfront</strong>,
+                    <strong>Product Catalogue</strong>, and
+                    <strong>Stock Manager</strong>.
+                </p>
+
+                <p>
+                    Each service is built using Maven, packaged as a Java
+                    application, containerized using Docker, published to
+                    Docker Hub, and deployed to Kubernetes using dedicated
+                    Deployments and NodePort Services.
+                </p>
+
+                <p>
+                    The Shopfront service retrieves product information from
+                    the Product Catalogue service and stock information from
+                    the Stock Manager service, combining the responses into
+                    the application's product view.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Technology Stack
+        ========================== -->
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Technology
+                </p>
+
+                <h2>
+                    Technology Stack
+                </h2>
+
+            </div>
+
+            <div class="project-technologies large">
+
+                <span>Java 8</span>
+                <span>Spring Boot</span>
+                <span>Dropwizard</span>
+                <span>Maven</span>
+                <span>Docker</span>
+                <span>Docker Hub</span>
+                <span>Kubernetes</span>
+                <span>Minikube</span>
+                <span>kubectl</span>
+                <span>Amazon Linux</span>
+                <span>EC2</span>
+                <span>Hystrix</span>
+                <span>H2 Database</span>
+                <span>Thymeleaf</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Architecture
+        ========================== -->
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Architecture
+                </p>
+
+                <h2>
+                    Microservices Architecture
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    The application uses a three-service microservices
+                    architecture. Shopfront acts as the application-facing
+                    service and retrieves information from the Product
+                    Catalogue and Stock Manager services.
+                </p>
+
+            </div>
+
+            <div class="pipeline-flow">
+
+                <div class="pipeline-step">
+
+                    <span>01</span>
+
+                    <strong>Shopfront</strong>
+
+                    <small>
+                        Spring Boot<br>
+                        Port 8010
+                    </small>
+
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+
+                    <span>02</span>
+
+                    <strong>Product Catalogue</strong>
+
+                    <small>
+                        Dropwizard<br>
+                        Port 8020
+                    </small>
+
+                </div>
+
+                <div class="pipeline-arrow">
+                    +
+                </div>
+
+                <div class="pipeline-step">
+
+                    <span>03</span>
+
+                    <strong>Stock Manager</strong>
+
+                    <small>
+                        Spring Boot<br>
+                        Port 8030
+                    </small>
+
+                </div>
+
+            </div>
+
+            <figure class="project-image">
+
+                <img
+                    src="../images/k8s-architecture.png"
+                    alt="Microservices Kubernetes architecture"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Microservices architecture showing Shopfront,
+                    Product Catalogue and Stock Manager.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- =========================
+             Application Flow
+        ========================== -->
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Application Flow
+                </p>
+
+                <h2>
+                    Service-to-Service Communication
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    The Shopfront service uses a Spring
+                    <code>RestTemplate</code> to communicate with the
+                    backend services.
+                </p>
+
+                <p>
+                    The Product Repository requests product information
+                    from the Product Catalogue service through the
+                    <code>/products</code> endpoint.
+                </p>
+
+                <p>
+                    The Stock Repository requests inventory information
+                    from the Stock Manager through the
+                    <code>/stocks</code> endpoint.
+                </p>
+
+                <p>
+                    The Product Service then combines product and stock
+                    information to create the application's product
+                    representation.
+                </p>
+
+            </div>
+
+            <div class="technical-list">
+
+                <div>
+
+                    <strong>
+                        Product Catalogue
+                    </strong>
+
+                    <span>
+                        Provides product information through the
+                        <code>/products</code> endpoint.
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Stock Manager
+                    </strong>
+
+                    <span>
+                        Provides inventory information through the
+                        <code>/stocks</code> endpoint.
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Shopfront Aggregation
+                    </strong>
+
+                    <span>
+                        Combines product and inventory data before
+                        presenting the resulting product information.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Application Build
+        ========================== -->
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Build
+                </p>
+
+                <h2>
+                    Maven Application Build
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    Each microservice is maintained as an independent
+                    Maven project and packaged into a Java artifact before
+                    containerization.
+                </p>
+
+                <p>
+                    The build process produces the application JAR that is
+                    subsequently copied into the corresponding Docker image.
+                </p>
+
+            </div>
+
+            <figure class="project-image">
+
+                <img
+                    src="../images/maven-build.png"
+                    alt="Maven build for Kubernetes microservices"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Maven build and application packaging.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- =========================
+             Docker
+        ========================== -->
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Containerization
+                </p>
+
+                <h2>
+                    Docker Containerization
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    Each microservice is containerized independently using
+                    a dedicated Dockerfile and the Eclipse Temurin Java 8
+                    runtime.
+                </p>
+
+                <p>
+                    The resulting images are tagged using the Docker Hub
+                    account and published before deployment to Kubernetes.
+                </p>
+
+            </div>
+
+            <div class="project-gallery two-column">
+
+                <figure class="project-image">
+
+                    <img
+                        src="../images/docker-images.png"
+                        alt="Docker images for microservices"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Docker images created for the three microservices.
+                    </figcaption>
+
+                </figure>
+
+                <figure class="project-image">
+
+                    <img
+                        src="../images/dockerhub-images.png"
+                        alt="Microservice images published to Docker Hub"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Microservice container images published to Docker Hub.
+                    </figcaption>
+
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Kubernetes Deployment
+        ========================== -->
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Kubernetes
+                </p>
+
+                <h2>
+                    Kubernetes Deployment
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    The application is deployed to a Minikube Kubernetes
+                    cluster running with the Docker driver.
+                </p>
+
+                <p>
+                    Each microservice has a Kubernetes Deployment responsible
+                    for managing its Pod and a NodePort Service responsible
+                    for exposing the application.
+                </p>
+
+                <p>
+                    The deployments use one replica for each service in the
+                    current project configuration.
+                </p>
+
+            </div>
+
+            <div class="pipeline-flow">
+
+                <div class="pipeline-step">
+
+                    <span>01</span>
+
+                    <strong>Shopfront</strong>
+
+                    <small>
+                        Deployment<br>
+                        NodePort :8010
+                    </small>
+
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+
+                    <span>02</span>
+
+                    <strong>Product Catalogue</strong>
+
+                    <small>
+                        Deployment<br>
+                        NodePort :8020
+                    </small>
+
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+
+                    <span>03</span>
+
+                    <strong>Stock Manager</strong>
+
+                    <small>
+                        Deployment<br>
+                        NodePort :8030
+                    </small>
+
+                </div>
+
+            </div>
+
+            <figure class="project-image">
+
+                <img
+                    src="../images/k8s-deployments.png"
+                    alt="Kubernetes deployments"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Kubernetes Deployments for the three application services.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- =========================
+             Pods
+        ========================== -->
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Workloads
+                </p>
+
+                <h2>
+                    Running Kubernetes Pods
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    Kubernetes creates a Pod for each deployed microservice.
+                    Each Pod contains the corresponding application
+                    container created from the Docker image.
+                </p>
+
+            </div>
+
+            <figure class="project-image">
+
+                <img
+                    src="../images/k8s-pods.png"
+                    alt="Running Kubernetes pods"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Running Pods for Shopfront, Product Catalogue and
+                    Stock Manager.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- =========================
+             Services
+        ========================== -->
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Networking
+                </p>
+
+                <h2>
+                    Kubernetes Services
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    Each application component is exposed through a
+                    Kubernetes NodePort Service. The Services select their
+                    corresponding Pods using application labels.
+                </p>
+
+            </div>
+
+            <div class="technical-list">
+
+                <div>
+
+                    <strong>
+                        Shopfront Service
+                    </strong>
+
+                    <span>
+                        NodePort Service targeting the
+                        <code>shopfront</code> application on port 8010.
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Product Catalogue Service
+                    </strong>
+
+                    <span>
+                        NodePort Service targeting the
+                        <code>productcatalogue</code> application on
+                        port 8020.
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Stock Manager Service
+                    </strong>
+
+                    <span>
+                        NodePort Service targeting the
+                        <code>stockmanager</code> application on
+                        port 8030.
+                    </span>
+
+                </div>
+
+            </div>
+
+            <figure class="project-image">
+
+                <img
+                    src="../images/k8s-services.png"
+                    alt="Kubernetes services"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Kubernetes Services exposing the deployed workloads.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- =========================
+             Health Checks
+        ========================== -->
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Reliability
+                </p>
+
+                <h2>
+                    Application Health Checks
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    Kubernetes liveness probes are configured for the
+                    application containers to allow Kubernetes to monitor
+                    application health.
+                </p>
+
+                <p>
+                    The Shopfront and Stock Manager services expose health
+                    endpoints through their application configuration, while
+                    the Product Catalogue uses its Dropwizard administration
+                    endpoint for health monitoring.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Kubernetes Dashboard
+        ========================== -->
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Monitoring
+                </p>
+
+                <h2>
+                    Kubernetes Dashboard
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    The Minikube Dashboard was used to inspect Kubernetes
+                    workloads, Pods, Services and application status through
+                    a graphical interface.
+                </p>
+
+            </div>
+
+            <figure class="project-image">
+
+                <img
+                    src="../images/k8s-dashboard.png"
+                    alt="Minikube Kubernetes Dashboard"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Minikube Dashboard showing the Kubernetes workloads.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- =========================
+             Application Running
+        ========================== -->
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Result
+                </p>
+
+                <h2>
+                    Application Running on Kubernetes
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    After the Docker images were published and the Kubernetes
+                    resources applied, the microservices were available
+                    through their configured Kubernetes Services.
+                </p>
+
+                <p>
+                    The deployed application was validated through the
+                    exposed Shopfront service and Kubernetes workload status.
+                </p>
+
+            </div>
+
+            <figure class="project-image">
+
+                <img
+                    src="../images/application-running.png"
+                    alt="Microservices application running on Kubernetes"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Application running through the Kubernetes deployment.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- =========================
+             Deployment Workflow
+        ========================== -->
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Workflow
+                </p>
+
+                <h2>
+                    End-to-End Deployment Flow
+                </h2>
+
+            </div>
+
+            <div class="pipeline-flow">
+
+                <div class="pipeline-step">
+
+                    <span>01</span>
+
+                    <strong>Source Code</strong>
+
+                    <small>
+                        GitHub repository
+                    </small>
+
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+
+                    <span>02</span>
+
+                    <strong>Maven</strong>
+
+                    <small>
+                        Build JAR
+                    </small>
+
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+
+                    <span>03</span>
+
+                    <strong>Docker</strong>
+
+                    <small>
+                        Build images
+                    </small>
+
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+
+                    <span>04</span>
+
+                    <strong>Docker Hub</strong>
+
+                    <small>
+                        Publish images
+                    </small>
+
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+
+                    <span>05</span>
+
+                    <strong>Kubernetes</strong>
+
+                    <small>
+                        Deploy workloads
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Engineering Concepts
+        ========================== -->
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Engineering
+                </p>
+
+                <h2>
+                    Key Concepts Demonstrated
+                </h2>
+
+            </div>
+
+            <div class="concept-grid">
+
+                <div class="concept-card">
+
+                    <h3>
+                        Containerization
+                    </h3>
+
+                    <p>
+                        Packaged each Java microservice into an independent
+                        Docker image using a Java runtime container.
+                    </p>
+
+                </div>
+
+                <div class="concept-card">
+
+                    <h3>
+                        Kubernetes Deployments
+                    </h3>
+
+                    <p>
+                        Used Deployments to manage application Pods and
+                        declaratively define the desired workload state.
+                    </p>
+
+                </div>
+
+                <div class="concept-card">
+
+                    <h3>
+                        Kubernetes Services
+                    </h3>
+
+                    <p>
+                        Used NodePort Services to expose the individual
+                        application workloads.
+                    </p>
+
+                </div>
+
+                <div class="concept-card">
+
+                    <h3>
+                        Service Communication
+                    </h3>
+
+                    <p>
+                        Shopfront retrieves product and stock information
+                        from the backend microservices.
+                    </p>
+
+                </div>
+
+                <div class="concept-card">
+
+                    <h3>
+                        Health Monitoring
+                    </h3>
+
+                    <p>
+                        Configured Kubernetes liveness probes to monitor
+                        application health.
+                    </p>
+
+                </div>
+
+                <div class="concept-card">
+
+                    <h3>
+                        Fault Tolerance
+                    </h3>
+
+                    <p>
+                        Implemented a Hystrix fallback in the Stock Manager
+                        integration path for unavailable stock responses.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Engineering Learnings
+        ========================== -->
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Learning
+                </p>
+
+                <h2>
+                    Engineering Learnings
+                </h2>
+
+            </div>
+
+            <ul class="project-list">
+
+                <li>
+                    Learned how independently packaged services can be
+                    containerized and deployed as Kubernetes workloads.
+                </li>
+
+                <li>
+                    Practiced creating Kubernetes Deployments and Services
+                    using declarative YAML manifests.
+                </li>
+
+                <li>
+                    Worked with Kubernetes Pods, labels, selectors,
+                    replicas and NodePort Services.
+                </li>
+
+                <li>
+                    Built and published Docker images for multiple
+                    application components.
+                </li>
+
+                <li>
+                    Practiced service-to-service communication between
+                    Java microservices.
+                </li>
+
+                <li>
+                    Used Kubernetes liveness probes to define application
+                    health checks.
+                </li>
+
+                <li>
+                    Used Minikube Dashboard and kubectl to inspect and
+                    troubleshoot workloads.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- =========================
+             Future Improvements
+        ========================== -->
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Next Steps
+                </p>
+
+                <h2>
+                    Future Improvements
+                </h2>
+
+            </div>
+
+            <ul class="project-list">
+
+                <li>
+                    Move from Minikube to a managed Kubernetes platform such
+                    as Amazon EKS.
+                </li>
+
+                <li>
+                    Replace NodePort exposure with Kubernetes Ingress for
+                    application routing.
+                </li>
+
+                <li>
+                    Introduce ConfigMaps and Kubernetes Secrets for
+                    configuration management.
+                </li>
+
+                <li>
+                    Add centralized monitoring and observability for
+                    Kubernetes workloads.
+                </li>
+
+                <li>
+                    Implement automated CI/CD deployment from source control
+                    to Kubernetes.
+                </li>
+
+                <li>
+                    Improve container image versioning and replace the
+                    current <code>latest</code> image tag with immutable
+                    versioned tags.
+                </li>
+
+                <li>
+                    Introduce multiple replicas and stronger production
+                    readiness configuration.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- =========================
+             Project Conclusion
+        ========================== -->
+        <section class="project-end">
+
+            <p class="section-label">
+                Project Complete
+            </p>
+
+            <h2>
+                From Java Services to Kubernetes Workloads
+            </h2>
+
+            <p>
+                This project provided hands-on experience across the complete
+                containerized application deployment lifecycle — from Maven
+                builds and Docker image creation to Kubernetes Deployments,
+                Services, health checks and workload monitoring.
+            </p>
+
+            <div class="project-actions">
+
+                <a
+                    href="https://github.com/shyam-sunder01/Microservices-Deployment-on-Kubernetes"
+                    class="project-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View Source on GitHub
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         Footer
+    ========================== -->
+    <footer class="site-footer">
+
+        <p>
+            © 2026 Shyam Sunder. Built with HTML, CSS and JavaScript.
+        </p>
+
+    </footer>
+
+
+    <script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        End-to-End Jenkins CI/CD Pipeline | Shyam Sunder
+    </title>
+
+    <meta
+        name="description"
+        content="End-to-end Jenkins CI/CD pipeline project using Terraform, AWS EC2, Maven, SonarQube, Docker, Trivy and Docker Hub."
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../assets/css/main.css"
+    >
+
+</head>
+
+<body>
+
+   <!-- =========================
+     Navigation
+========================== -->
+<header class="site-header">
+    <nav class="navbar">
+
+        <a href="../../index.html" class="nav-logo">
+            Shyam Sunder
+        </a>
+
+        <button class="nav-toggle"
+                type="button"
+                aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <ul class="nav-menu">
+            <li><a href="../../index.html">Home</a></li>
+
+            <li><a href="../../about/">About</a></li>
+
+            <li><a href="../../index.html#experience">Experience</a></li>
+
+            <li><a href="../../index.html#skills">Skills</a></li>
+
+            <li><a href="../../education/index.html">Education</a></li>
+
+            <li><a href="../../index.html#architecture">Architecture</a></li>
+
+            <li><a href="../../index.html#certifications">Certifications</a></li>
+
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+    <!-- =====================================================
+         Project Header
+         ===================================================== -->
+
+    <main class="project-page">
+
+        <section class="project-hero">
+
+            <p class="section-label">
+                Personal Project
+            </p>
+
+            <h1>
+                End-to-End Jenkins CI/CD Pipeline
+            </h1>
+
+            <p class="project-hero-description">
+
+                Designed and implemented an end-to-end CI/CD pipeline
+                for a Spring Boot application using Jenkins, Maven,
+                SonarQube, Docker, Trivy and Docker Hub, with the Jenkins
+                infrastructure provisioned on AWS EC2 using Terraform.
+
+            </p>
+
+            <div class="project-actions">
+
+                <a
+                    href="https://github.com/shyam-sunder01/jenkins-springboot-cicd-pipeline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-button"
+                >
+                    View GitHub Repository
+                </a>
+
+                <a
+                    href="../../index.html#projects"
+                    class="project-button secondary"
+                >
+                    ← Back to Projects
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             Project Overview
+             ================================================= -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Overview
+                </p>
+
+                <h2>
+                    Project Objective
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    The goal of this project was to build a complete
+                    automated CI/CD workflow for a Java Spring Boot
+                    application. The pipeline integrates source-code
+                    management, automated testing, static code analysis,
+                    quality validation, containerization, security
+                    scanning and container image publishing.
+                </p>
+
+                <p>
+                    Jenkins was deployed on an AWS EC2 instance provisioned
+                    using Terraform. GitHub was integrated with Jenkins
+                    using SSH authentication, while Jenkins Shared Library
+                    functions were used to make common pipeline operations
+                    reusable.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             Technology Stack
+             ================================================= -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Technology Stack
+                </p>
+
+                <h2>
+                    Tools & Technologies
+                </h2>
+
+            </div>
+
+            <div class="project-technologies large">
+
+                <span>AWS EC2</span>
+                <span>Terraform</span>
+                <span>Jenkins</span>
+                <span>GitHub</span>
+                <span>Java 21</span>
+                <span>Spring Boot</span>
+                <span>Maven</span>
+                <span>SonarQube</span>
+                <span>Docker</span>
+                <span>Trivy</span>
+                <span>Docker Hub</span>
+                <span>Groovy</span>
+                <span>Jenkins Shared Library</span>
+                <span>Linux</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             Pipeline Overview
+             ================================================= -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    CI/CD Workflow
+                </p>
+
+                <h2>
+                    End-to-End Pipeline
+                </h2>
+
+            </div>
+
+            <div class="pipeline-flow">
+
+                <div class="pipeline-step">
+                    <span>01</span>
+                    <strong>GitHub</strong>
+                    <small>Source Code</small>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+                    <span>02</span>
+                    <strong>Jenkins</strong>
+                    <small>Pipeline</small>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+                    <span>03</span>
+                    <strong>Maven</strong>
+                    <small>Testing & Build</small>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+                    <span>04</span>
+                    <strong>SonarQube</strong>
+                    <small>Code Analysis</small>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+                    <span>05</span>
+                    <strong>Quality Gate</strong>
+                    <small>Validation</small>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+                    <span>06</span>
+                    <strong>Docker</strong>
+                    <small>Container Image</small>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+                    <span>07</span>
+                    <strong>Trivy</strong>
+                    <small>Security Scan</small>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+                    <span>08</span>
+                    <strong>Docker Hub</strong>
+                    <small>Image Registry</small>
+                </div>
+
+            </div>
+
+            <div class="project-image">
+                <img
+                    src="../images/pipeline-overview.png"
+                    alt="Complete Jenkins CI/CD pipeline overview"
+                    loading="lazy"
+                >
+
+                <p class="image-caption">
+                    Complete CI/CD workflow showing the major Jenkins pipeline stages.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             Infrastructure Provisioning
+             ================================================= -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Infrastructure as Code
+                </p>
+
+                <h2>
+                    Jenkins Infrastructure with Terraform
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    The Jenkins server infrastructure was provisioned on
+                    AWS using Terraform. This provided a repeatable
+                    Infrastructure as Code approach for creating the
+                    environment required to run the CI/CD pipeline.
+                </p>
+
+                <p>
+                    The Terraform configuration provisions the required
+                    AWS resources and creates the EC2 instance used as
+                    the Jenkins server.
+                </p>
+
+            </div>
+
+
+            <div class="project-gallery two-column">
+
+                <figure class="project-image">
+
+                    <img
+                        src="../images/terraform-apply.png"
+                        alt="Terraform apply output showing AWS infrastructure provisioning"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        Terraform apply successfully provisioning the AWS infrastructure.
+                    </figcaption>
+
+                </figure>
+
+
+                <figure class="project-image">
+
+                    <img
+                        src="../images/aws-ec2.png"
+                        alt="AWS EC2 instance created through Terraform"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        AWS EC2 instance created through the Terraform configuration.
+                    </figcaption>
+
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             Jenkins Pipeline
+             ================================================= -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Jenkins
+                </p>
+
+                <h2>
+                    Automated Pipeline Execution
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    The Jenkins pipeline follows a declarative CI/CD
+                    approach and automates the complete application
+                    validation and container publishing workflow.
+                </p>
+
+                <p>
+                    The pipeline includes source-code checkout, unit
+                    testing, integration testing, SonarQube analysis,
+                    Quality Gate validation, Maven packaging, Docker
+                    image creation, Trivy security scanning, Docker Hub
+                    publishing and image cleanup.
+                </p>
+
+            </div>
+
+
+            <figure class="project-image">
+
+                <img
+                    src="../images/jenkins-pipeline.png"
+                    alt="Jenkins pipeline showing successful stages"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Jenkins pipeline execution with successful stages.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- =================================================
+             Parameterized Build
+             ================================================= -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Pipeline Parameters
+                </p>
+
+                <h2>
+                    Parameterized Jenkins Build
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    The pipeline supports build-time parameters for
+                    controlling container image information. This allows
+                    the Docker Hub username, image name and image tag to
+                    be supplied when triggering a build.
+                </p>
+
+            </div>
+
+
+            <figure class="project-image">
+
+                <img
+                    src="../images/jenkins-parameters.png"
+                    alt="Jenkins parameterized build showing Docker Hub username image name and image tag"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Parameterized Jenkins build showing Docker image configuration.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- =================================================
+             Testing & Build
+             ================================================= -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Build & Validation
+                </p>
+
+                <h2>
+                    Automated Testing with Maven
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    Maven is used to manage the Spring Boot application
+                    build lifecycle. The pipeline executes automated
+                    unit tests and integration tests before proceeding
+                    with the application packaging and containerization
+                    stages.
+                </p>
+
+                <div class="technical-list">
+
+                    <div>
+                        <strong>Unit Testing</strong>
+                        <span>
+                            Maven test execution for application validation.
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong>Integration Testing</strong>
+                        <span>
+                            Maven Failsafe-based integration test execution.
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong>Application Build</strong>
+                        <span>
+                            Maven packages the Spring Boot application as a JAR.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SonarQube
+             ================================================= -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Code Quality
+                </p>
+
+                <h2>
+                    SonarQube Analysis & Quality Gate
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    SonarQube is integrated into the Maven build process
+                    to perform static code analysis. The pipeline then
+                    waits for the SonarQube Quality Gate result before
+                    continuing with the downstream containerization
+                    stages.
+                </p>
+
+                <p>
+                    This provides an automated quality checkpoint inside
+                    the CI/CD workflow rather than treating code analysis
+                    as a separate manual activity.
+                </p>
+
+            </div>
+
+
+            <figure class="project-image">
+
+                <img
+                    src="../images/sonarqube-dashboard.png"
+                    alt="SonarQube dashboard showing project analysis results"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    SonarQube dashboard showing the application's code analysis results.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- =================================================
+             Docker
+             ================================================= -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Containerization
+                </p>
+
+                <h2>
+                    Docker Image Creation
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    After successful testing and quality validation,
+                    the Spring Boot application is packaged into a Docker
+                    image. The Jenkins pipeline builds the image using
+                    the generated application JAR and prepares it for
+                    security scanning and publishing.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             Trivy
+             ================================================= -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Container Security
+                </p>
+
+                <h2>
+                    Docker Image Vulnerability Scanning
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    Trivy is integrated into the pipeline to scan the
+                    generated Docker image for known vulnerabilities
+                    before the image is published to Docker Hub.
+                </p>
+
+                <p>
+                    This places container security directly into the
+                    CI/CD workflow and provides an additional validation
+                    step before publishing the image.
+                </p>
+
+            </div>
+
+
+            <figure class="project-image">
+
+                <img
+                    src="../images/trivy-scan.png"
+                    alt="Trivy Docker image vulnerability scan in Jenkins"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Trivy security scan executed as part of the Jenkins pipeline.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- =================================================
+             Docker Hub
+             ================================================= -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Container Registry
+                </p>
+
+                <h2>
+                    Docker Hub Publishing
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    After the Docker image passes the required pipeline
+                    stages, Jenkins authenticates to Docker Hub using
+                    Jenkins-managed credentials and publishes the image
+                    to the configured repository.
+                </p>
+
+                <p>
+                    Credentials are managed through Jenkins Credentials
+                    rather than being stored directly in the pipeline
+                    source code.
+                </p>
+
+            </div>
+
+
+            <figure class="project-image">
+
+                <img
+                    src="../images/dockerhub-push.png"
+                    alt="Docker Hub repository showing successfully pushed Docker image"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Docker Hub repository showing the successfully published container image.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- =================================================
+             Jenkins Shared Library
+             ================================================= -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Pipeline Reusability
+                </p>
+
+                <h2>
+                    Jenkins Shared Library
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    A Jenkins Shared Library was implemented to move
+                    reusable CI/CD operations outside the main Jenkinsfile.
+                    This allows common pipeline activities to be organized
+                    into reusable functions instead of duplicating
+                    pipeline logic.
+                </p>
+
+                <p>
+                    The shared functions cover operations such as Git
+                    checkout, Maven testing, SonarQube analysis,
+                    Quality Gate validation, Maven builds, Docker image
+                    creation, Trivy scanning and Docker image cleanup.
+                </p>
+
+            </div>
+
+
+            <figure class="project-image">
+
+                <img
+                    src="../images/shared-library-github.png"
+                    alt="GitHub repository containing Jenkins Shared Library"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Jenkins Shared Library repository containing reusable pipeline functions.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+
+        <!-- =================================================
+             Source Code
+             ================================================= -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Source Code
+                </p>
+
+                <h2>
+                    GitHub Repository
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    The complete project source code, Jenkins pipeline
+                    configuration, Maven configuration, Dockerfile and
+                    application source are maintained in the GitHub
+                    repository.
+                </p>
+
+            </div>
+
+
+            <figure class="project-image">
+
+                <img
+                    src="../images/github-repository.png"
+                    alt="GitHub repository containing Jenkins CI/CD project files"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    GitHub repository containing the project source and CI/CD configuration.
+                </figcaption>
+
+            </figure>
+
+
+            <div class="project-actions">
+
+                <a
+                    href="https://github.com/shyam-sunder01/jenkins-springboot-cicd-pipeline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-button"
+                >
+                    Open GitHub Repository →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             Key Engineering Concepts
+             ================================================= -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Engineering Concepts
+                </p>
+
+                <h2>
+                    What This Project Demonstrates
+                </h2>
+
+            </div>
+
+            <div class="concept-grid">
+
+                <div class="concept-card">
+
+                    <h3>
+                        CI/CD Automation
+                    </h3>
+
+                    <p>
+                        Automated application validation, packaging,
+                        containerization and image publishing.
+                    </p>
+
+                </div>
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Infrastructure as Code
+                    </h3>
+
+                    <p>
+                        AWS infrastructure provisioned using Terraform
+                        instead of manual infrastructure creation.
+                    </p>
+
+                </div>
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Code Quality
+                    </h3>
+
+                    <p>
+                        SonarQube analysis and Quality Gate validation
+                        integrated directly into the pipeline.
+                    </p>
+
+                </div>
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Container Security
+                    </h3>
+
+                    <p>
+                        Docker images scanned with Trivy before
+                        publishing to the container registry.
+                    </p>
+
+                </div>
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Pipeline Reusability
+                    </h3>
+
+                    <p>
+                        Jenkins Shared Library functions used to
+                        organize reusable CI/CD operations.
+                    </p>
+
+                </div>
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Secure Credentials
+                    </h3>
+
+                    <p>
+                        GitHub, SonarQube and Docker Hub credentials
+                        managed through Jenkins credentials.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             Project Learnings
+             ================================================= -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Key Takeaways
+                </p>
+
+                <h2>
+                    Engineering Learnings
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    This project provided hands-on experience designing
+                    and troubleshooting a complete CI/CD workflow rather
+                    than implementing individual pipeline stages in
+                    isolation.
+                </p>
+
+                <ul class="project-list">
+
+                    <li>
+                        Designed declarative Jenkins pipelines for automated
+                        application delivery.
+                    </li>
+
+                    <li>
+                        Integrated GitHub with Jenkins using SSH-based
+                        authentication.
+                    </li>
+
+                    <li>
+                        Automated unit and integration testing with Maven.
+                    </li>
+
+                    <li>
+                        Integrated SonarQube analysis and Quality Gate
+                        validation into the pipeline.
+                    </li>
+
+                    <li>
+                        Built and scanned Docker images before publishing.
+                    </li>
+
+                    <li>
+                        Used Jenkins credentials for external service
+                        authentication.
+                    </li>
+
+                    <li>
+                        Applied Jenkins Shared Library concepts for
+                        reusable pipeline operations.
+                    </li>
+
+                    <li>
+                        Provisioned the Jenkins infrastructure using
+                        Terraform on AWS.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             Future Improvements
+             ================================================= -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Future Improvements
+                </p>
+
+                <h2>
+                    Possible Enhancements
+                </h2>
+
+            </div>
+
+            <div class="project-content">
+
+                <ul class="project-list">
+
+                    <li>
+                        Align the Docker runtime image with the application's
+                        Java 21 runtime.
+                    </li>
+
+                    <li>
+                        Parameterize Docker image tags instead of relying
+                        on a fixed tag.
+                    </li>
+
+                    <li>
+                        Add JaCoCo-based code coverage reporting.
+                    </li>
+
+                    <li>
+                        Further restrict the AWS security group for
+                        production-oriented deployment.
+                    </li>
+
+                    <li>
+                        Extend the pipeline with automated application
+                        deployment after successful image publishing.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             Project Footer
+             ================================================= -->
+
+        <section class="project-end">
+
+            <p class="section-label">
+                End-to-End DevOps Automation
+            </p>
+
+            <h2>
+                From Infrastructure Provisioning to Container Publishing
+            </h2>
+
+            <p>
+                Terraform provisions the infrastructure, Jenkins
+                orchestrates the delivery workflow, and automated
+                quality and security checks validate the application
+                before container publishing.
+            </p>
+
+            <div class="project-actions">
+
+                <a
+                    href="https://github.com/shyam-sunder01/jenkins-springboot-cicd-pipeline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-button"
+                >
+                    View Source Code →
+                </a>
+
+                <a
+                    href="../../index.html#projects"
+                    class="project-button secondary"
+                >
+                    ← Back to Portfolio
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         Footer
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+        <p>
+            © 2026 Shyam Sunder. Built with HTML, CSS & JavaScript.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
