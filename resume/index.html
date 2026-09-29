@@ -478,66 +478,166 @@
            Responsive
            ========================================================= */
 
+        /* =========================================================
+           Responsive / Mobile
+           ========================================================= */
+
         @media (max-width: 768px) {
 
             .resume-page {
-                padding: 55px 15px 70px;
+                padding: 40px 12px 60px;
             }
 
-
-            .resume-intro {
-                margin-bottom: 40px;
-            }
-
-
-            .resume-intro h1 {
-                letter-spacing: -1px;
-            }
-
-
-            .resume-intro h2 {
-                letter-spacing: 2px;
-            }
-
-
-            .resume-status {
-                gap: 7px;
-            }
-
-
-            .resume-status span {
-                font-size: 0.72rem;
-            }
-
-
-            .resume-viewer iframe {
-                height: 850px;
-            }
-
-
-            .resume-viewer-title {
-                font-size: 0.68rem;
-            }
-
-        }
-
-
-        @media (max-width: 480px) {
-
-            .resume-actions {
-                flex-direction: column;
-            }
-
-
-            .resume-button {
+            .resume-container {
                 width: 100%;
             }
 
-
-            .resume-viewer iframe {
-                height: 700px;
+            .resume-intro {
+                width: 100%;
+                margin-bottom: 32px;
             }
 
+            .resume-intro h1 {
+                font-size: clamp(2rem, 11vw, 3.2rem);
+                letter-spacing: -1px;
+                line-height: 1.05;
+                word-break: break-word;
+            }
+
+            .resume-intro h2 {
+                font-size: 0.95rem;
+                line-height: 1.5;
+                letter-spacing: 1.5px;
+            }
+
+            .resume-intro p {
+                padding: 0 5px;
+                font-size: 0.9rem;
+                line-height: 1.7;
+            }
+
+            .resume-status {
+                gap: 6px;
+                padding: 0 4px;
+            }
+
+            .resume-status span {
+                padding: 6px 9px;
+                font-size: 0.68rem;
+            }
+
+            .resume-actions {
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+            }
+
+            .resume-button {
+                width: 100%;
+                min-width: 0;
+                box-sizing: border-box;
+                padding: 12px 16px;
+            }
+
+            .resume-viewer-wrapper {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .resume-viewer {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .resume-viewer-header {
+                padding: 10px 12px;
+            }
+
+            .resume-viewer-title {
+                font-size: 0.62rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                max-width: 70%;
+            }
+
+            /* Embedded PDFs are unreliable on small screens.
+               Keep the desktop preview, but use a mobile-friendly
+               open button instead of forcing the PDF into the viewport. */
+            .resume-viewer iframe {
+                display: none;
+            }
+
+            .resume-mobile-pdf {
+                display: flex;
+                min-height: 180px;
+                padding: 24px 18px;
+                box-sizing: border-box;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+                text-align: center;
+                background: #080d18;
+            }
+
+            .resume-mobile-pdf strong {
+                color: var(--text-primary);
+                font-size: 1rem;
+            }
+
+            .resume-mobile-pdf span {
+                color: var(--text-secondary);
+                font-size: 0.82rem;
+                line-height: 1.5;
+            }
+
+            .resume-mobile-pdf a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 11px 18px;
+                border-radius: var(--radius-small);
+                background: var(--accent);
+                color: var(--bg-primary);
+                font-weight: 700;
+                text-decoration: none;
+            }
+
+            .resume-signature {
+                margin-top: 42px;
+            }
+        }
+
+        /* Hidden on desktop; shown only on mobile. */
+        .resume-mobile-pdf {
+            display: none;
+        }
+
+        @media (max-width: 480px) {
+
+            .resume-page {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .resume-system-label {
+                font-size: 0.68rem;
+                letter-spacing: 2px;
+            }
+
+            .resume-intro h2 {
+                font-size: 0.85rem;
+                letter-spacing: 1px;
+            }
+
+            .resume-status span {
+                font-size: 0.64rem;
+            }
+
+            .resume-mobile-pdf {
+                display: flex;
+            }
         }
 
     </style>
@@ -679,7 +779,7 @@
                 <div class="resume-actions">
 
                     <a
-                        href="ShyamSunderSREDevOps.pdf"
+                        href="ShyamSunderSREDevOps.pdf?v=20260929"
                         class="resume-button primary"
                         download
                     >
@@ -688,7 +788,7 @@
 
 
                     <a
-                        href="ShyamSunderSREDevOps.pdf"
+                        href="ShyamSunderSREDevOps.pdf?v=20260929"
                         class="resume-button secondary"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -736,10 +836,25 @@
 
 
                     <iframe
-                        src="ShyamSunderSREDevOps.pdf"
+                        src="ShyamSunderSREDevOps.pdf?v=20260929#toolbar=1&view=FitH"
                         title="Shyam Sunder Resume"
                     >
                     </iframe>
+
+                    <div class="resume-mobile-pdf">
+                        <strong>Resume PDF</strong>
+                        <span>
+                            For the best mobile experience, open the latest
+                            PDF in your phone's PDF viewer.
+                        </span>
+                        <a
+                            href="ShyamSunderSREDevOps.pdf?v=20260929"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Open Latest Resume
+                        </a>
+                    </div>
 
                 </div>
 
