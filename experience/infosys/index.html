@@ -18,10 +18,9 @@
 
 </head>
 
-<body> 
-    <!-- class="project-page"> -->
 
-    
+<body>
+
 
     <!-- =========================================================
          Navigation
@@ -97,6 +96,7 @@
         </nav>
 
     </header>
+
 
 
     <!-- =========================================================
@@ -175,21 +175,22 @@
 
                 As an SRE / DevOps Engineer at Infosys, supporting
                 GE Appliances, a Haier Company, I have worked across
-                application delivery, cloud infrastructure, CI/CD
-                automation, containerization, infrastructure
-                automation, application security, monitoring, and
-                production readiness.
+                application delivery, CI/CD automation, cloud
+                infrastructure, infrastructure automation,
+                containerization, application security, monitoring,
+                and production readiness.
 
             </p>
 
             <p class="project-hero-description"
                style="margin-left: 0; margin-top: 20px;">
 
-                My experience spans AWS and GCP environments,
-                Jenkins-based CI/CD, Terraform-managed infrastructure,
-                Linux administration, Docker, Kubernetes, Apache
-                Tomcat, Apache HTTP Server, JFrog Artifactory,
-                SonarQube, Black Duck, Fortify, and Grafana.
+                My professional experience includes AWS and GCP
+                environments, Jenkins-based CI/CD, Terraform-managed
+                infrastructure, Linux administration, Docker,
+                Kubernetes, Apache Tomcat, Apache HTTP Server,
+                JFrog Artifactory, SonarQube, Black Duck, Fortify,
+                Grafana, and MySQL.
 
             </p>
 
@@ -217,6 +218,7 @@
 
             <div class="concept-grid">
 
+
                 <div class="concept-card">
 
                     <h3>
@@ -224,8 +226,8 @@
                     </h3>
 
                     <p>
-                        Built and maintained CI/CD pipelines supporting
-                        application deployments across development,
+                        Built, maintained, and supported CI/CD pipelines
+                        for application delivery across development,
                         QA, and production environments.
                     </p>
 
@@ -239,10 +241,24 @@
                     </h3>
 
                     <p>
-                        Worked with AWS and GCP infrastructure,
-                        including compute, networking, storage,
-                        databases, load balancing, and Terraform-managed
-                        environments.
+                        Worked with AWS and GCP infrastructure across
+                        compute, networking, storage, databases,
+                        load balancing, identity, and security.
+                    </p>
+
+                </div>
+
+
+                <div class="concept-card">
+
+                    <h3>
+                        Infrastructure as Code
+                    </h3>
+
+                    <p>
+                        Used Terraform to manage infrastructure
+                        configuration in GCP environments, including
+                        LDAP connector infrastructure.
                     </p>
 
                 </div>
@@ -271,23 +287,8 @@
 
                     <p>
                         Worked with Docker images, Dockerfiles,
-                        container networking, and Docker Swarm
-                        deployments.
-                    </p>
-
-                </div>
-
-
-                <div class="concept-card">
-
-                    <h3>
-                        Kubernetes
-                    </h3>
-
-                    <p>
-                        Created and maintained Kubernetes Deployment,
-                        Service, and ConfigMap manifests for application
-                        deployments.
+                        container networking, Docker Swarm, and
+                        Kubernetes-based application deployment.
                     </p>
 
                 </div>
@@ -301,8 +302,8 @@
 
                     <p>
                         Supported monitoring, production readiness,
-                        and SRE onboarding activities involving
-                        SLIs, SLOs, and SLAs.
+                        SRE onboarding, and service-level validation
+                        involving SLIs, SLOs, and SLAs.
                     </p>
 
                 </div>
@@ -314,7 +315,7 @@
 
 
         <!-- =====================================================
-             Enterprise Architecture
+             CI/CD Evidence
              ===================================================== -->
 
         <section class="project-section">
@@ -322,47 +323,11 @@
             <div class="section-heading">
 
                 <p class="section-label">
-                    Enterprise Environment
+                    CI/CD Delivery
                 </p>
 
                 <h2>
-                    Platform & Delivery Architecture
-                </h2>
-
-            </div>
-
-            <figure class="project-image">
-
-                <img src="../../projects/images/ge-architecture.png"
-                     alt="Sanitized enterprise DevOps and SRE architecture showing CI/CD, AWS, GCP, Terraform, application deployment, security, artifacts, and monitoring">
-
-                <figcaption>
-                    High-level representation of the enterprise
-                    DevOps and SRE ecosystem. Sensitive client-specific
-                    infrastructure and identifiers are intentionally
-                    omitted.
-                </figcaption>
-
-            </figure>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             CI/CD Engineering
-             ===================================================== -->
-
-        <section class="project-section">
-
-            <div class="section-heading">
-
-                <p class="section-label">
-                    CI/CD Engineering
-                </p>
-
-                <h2>
-                    Jenkins-Based Application Delivery
+                    Automated Build & Container Deployment
                 </h2>
 
             </div>
@@ -370,155 +335,261 @@
             <p class="project-hero-description"
                style="margin-left: 0;">
 
-                Worked with Jenkins-based CI/CD pipelines to support
-                repeatable application delivery across development,
-                QA, and production environments.
+                Worked with automated CI/CD workflows covering source
+                retrieval, application build, container image creation,
+                image publishing, deployment, and pipeline validation.
+
+            </p>
+
+            <p class="project-hero-description"
+               style="margin-left: 0; margin-top: 20px;">
+
+                The example below shows a successful Jenkins execution
+                including Docker image build and push, ECS image
+                deployment, and successful pipeline completion.
 
             </p>
 
 
-            <div class="pipeline-flow">
+            <figure class="project-image">
 
-                <div class="pipeline-step">
+                <img src="../../projects/images/ge-jenkins-success.png"
+                     alt="Successful Jenkins CI/CD execution showing Docker image build and push, ECS deployment, and successful pipeline completion">
 
-                    <span>
-                        01
-                    </span>
+                <figcaption>
+                    Successful Jenkins CI/CD execution demonstrating
+                    automated container image build, image publishing,
+                    ECS deployment, and completed pipeline execution.
+                </figcaption>
+
+            </figure>
+
+
+            <div class="technical-list">
+
+
+                <div>
 
                     <strong>
                         Source
                     </strong>
 
-                    <small>
-                        Git
-                    </small>
-
-                </div>
-
-
-                <div class="pipeline-arrow">
-                    →
-                </div>
-
-
-                <div class="pipeline-step">
-
                     <span>
-                        02
+                        Git-based source control and application
+                        source retrieval.
                     </span>
+
+                </div>
+
+
+                <div>
 
                     <strong>
                         Build
                     </strong>
 
-                    <small>
-                        Maven
-                    </small>
-
-                </div>
-
-
-                <div class="pipeline-arrow">
-                    →
-                </div>
-
-
-                <div class="pipeline-step">
-
                     <span>
-                        03
+                        Maven-based Java application build and
+                        packaging workflows.
                     </span>
+
+                </div>
+
+
+                <div>
 
                     <strong>
-                        Quality
+                        Containerization
                     </strong>
 
-                    <small>
-                        SonarQube
-                    </small>
-
-                </div>
-
-
-                <div class="pipeline-arrow">
-                    →
-                </div>
-
-
-                <div class="pipeline-step">
-
                     <span>
-                        04
+                        Docker image creation and container-based
+                        application delivery.
                     </span>
+
+                </div>
+
+
+                <div>
 
                     <strong>
-                        Security
+                        Image Publishing
                     </strong>
 
-                    <small>
-                        Black Duck / Fortify
-                    </small>
-
-                </div>
-
-
-                <div class="pipeline-arrow">
-                    →
-                </div>
-
-
-                <div class="pipeline-step">
-
                     <span>
-                        05
+                        Container image publishing as part of the
+                        automated delivery workflow.
                     </span>
 
-                    <strong>
-                        Artifact
-                    </strong>
-
-                    <small>
-                        JFrog Artifactory
-                    </small>
-
                 </div>
 
 
-                <div class="pipeline-arrow">
-                    →
-                </div>
-
-
-                <div class="pipeline-step">
-
-                    <span>
-                        06
-                    </span>
+                <div>
 
                     <strong>
                         Deployment
                     </strong>
 
-                    <small>
-                        Application Platforms
-                    </small>
+                    <span>
+                        Supported automated deployment workflows
+                        for containerized applications.
+                    </span>
 
                 </div>
 
+
             </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             AWS CodePipeline
+             ===================================================== -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    AWS DevOps
+                </p>
+
+                <h2>
+                    AWS CodePipeline Delivery Workflow
+                </h2>
+
+            </div>
+
+            <p class="project-hero-description"
+               style="margin-left: 0;">
+
+                Worked with AWS-based application delivery workflows
+                incorporating source retrieval, static analysis,
+                infrastructure validation, security scanning,
+                application build, artifact analysis, and deployment.
+
+            </p>
 
 
             <figure class="project-image">
 
-                <img src="../../projects/images/ge-jenkins-pipeline.png"
-                     alt="Sanitized Jenkins CI/CD pipeline used for enterprise application delivery">
+                <img src="../../projects/images/ge-aws-codepipeline.png"
+                     alt="AWS CodePipeline execution workflow showing source, static analysis, build, artifact analysis, and deployment stages">
 
                 <figcaption>
-                    Example of the Jenkins-based application delivery
-                    workflow used in the enterprise environment.
+                    AWS CodePipeline execution workflow showing
+                    sequential source, validation, security,
+                    build, artifact analysis, and deployment stages.
                 </figcaption>
 
             </figure>
+
+
+            <div class="technical-list">
+
+
+                <div>
+
+                    <strong>
+                        Source
+                    </strong>
+
+                    <span>
+                        Application source code retrieved from
+                        Amazon S3.
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Static Analysis
+                    </strong>
+
+                    <span>
+                        Included infrastructure validation,
+                        Git secrets scanning, and application
+                        security analysis.
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        CloudFormation Validation
+                    </strong>
+
+                    <span>
+                        Validated Infrastructure as Code templates
+                        as part of the delivery workflow.
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Security Scanning
+                    </strong>
+
+                    <span>
+                        Supported secrets scanning and SAST-based
+                        vulnerability detection.
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Build
+                    </strong>
+
+                    <span>
+                        Application build execution as part of the
+                        AWS delivery workflow.
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Artifact Analysis
+                    </strong>
+
+                    <span>
+                        Supported container and artifact vulnerability
+                        scanning before deployment.
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Deployment
+                    </strong>
+
+                    <span>
+                        Automated deployment of validated application
+                        artifacts.
+                    </span>
+
+                </div>
+
+
+            </div>
 
         </section>
 
@@ -551,18 +622,66 @@
 
             </p>
 
+            <div class="technical-list">
 
-            <figure class="project-image">
 
-                <img src="../../projects/images/ge-jenkins-master-agent.png"
-                     alt="Sanitized Jenkins controller and agent architecture">
+                <div>
 
-                <figcaption>
-                    Jenkins Controller/Agent setup used to distribute
-                    CI/CD workloads across Linux environments.
-                </figcaption>
+                    <strong>
+                        Jenkins Controller
+                    </strong>
 
-            </figure>
+                    <span>
+                        Supported Jenkins controller configuration,
+                        pipeline management, and administration.
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Jenkins Agents
+                    </strong>
+
+                    <span>
+                        Supported distributed build workloads using
+                        Linux-based Jenkins agents.
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Pipeline Administration
+                    </strong>
+
+                    <span>
+                        Maintained pipeline configurations,
+                        credentials, tools, and build workflows.
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Linux
+                    </strong>
+
+                    <span>
+                        Worked with Linux servers hosting CI/CD
+                        infrastructure and application workloads.
+                    </span>
+
+                </div>
+
+
+            </div>
 
         </section>
 
@@ -598,6 +717,7 @@
 
             <div class="technical-list">
 
+
                 <div>
 
                     <strong>
@@ -605,7 +725,7 @@
                     </strong>
 
                     <span>
-                        Amazon EC2 and Auto Scaling Groups
+                        Amazon EC2 and Auto Scaling Groups.
                     </span>
 
                 </div>
@@ -618,8 +738,8 @@
                     </strong>
 
                     <span>
-                        VPC, Application Load Balancer, Route 53
-                        and Security Groups
+                        VPC, Application Load Balancer, Route 53,
+                        and Security Groups.
                     </span>
 
                 </div>
@@ -632,7 +752,7 @@
                     </strong>
 
                     <span>
-                        Amazon S3 and EBS
+                        Amazon S3 and EBS.
                     </span>
 
                 </div>
@@ -645,7 +765,7 @@
                     </strong>
 
                     <span>
-                        Amazon RDS
+                        Amazon RDS.
                     </span>
 
                 </div>
@@ -658,26 +778,13 @@
                     </strong>
 
                     <span>
-                        AWS IAM
+                        AWS IAM.
                     </span>
 
                 </div>
 
+
             </div>
-
-
-            <figure class="project-image">
-
-                <img src="../../projects/images/ge-aws-infrastructure.png"
-                     alt="Sanitized AWS infrastructure used for enterprise application hosting">
-
-                <figcaption>
-                    Sanitized representation of AWS infrastructure
-                    components supported within the application
-                    environment.
-                </figcaption>
-
-            </figure>
 
         </section>
 
@@ -710,7 +817,9 @@
 
             </p>
 
+
             <div class="technical-list">
+
 
                 <div>
 
@@ -744,7 +853,7 @@
                 <div>
 
                     <strong>
-                        Infrastructure Automation
+                        Infrastructure as Code
                     </strong>
 
                     <span>
@@ -755,21 +864,23 @@
 
                 </div>
 
+
+                <div>
+
+                    <strong>
+                        Infrastructure Operations
+                    </strong>
+
+                    <span>
+                        Supported infrastructure changes and
+                        environment maintenance within cloud-based
+                        platforms.
+                    </span>
+
+                </div>
+
+
             </div>
-
-
-            <figure class="project-image">
-
-                <img src="../../projects/images/ge-gcp-terraform.png"
-                     alt="Sanitized GCP and Terraform infrastructure workflow">
-
-                <figcaption>
-                    Sanitized view of Terraform-managed GCP
-                    infrastructure. Internal LDAP endpoints and
-                    customer-specific information are omitted.
-                </figcaption>
-
-            </figure>
 
         </section>
 
@@ -797,13 +908,14 @@
                style="margin-left: 0;">
 
                 Supported Java application build and deployment
-                workflows, including WAR/JAR packaging and automated
+                workflows, including WAR/JAR packaging and
                 deployments to Apache Tomcat environments.
 
             </p>
 
 
             <div class="technical-list">
+
 
                 <div>
 
@@ -860,21 +972,8 @@
 
                 </div>
 
+
             </div>
-
-
-            <figure class="project-image">
-
-                <img src="../../projects/images/ge-application-deployment.png"
-                     alt="Sanitized Java application deployment workflow from build artifact to Tomcat">
-
-                <figcaption>
-                    Application delivery flow from Java build and
-                    artifact management through deployment to
-                    application servers.
-                </figcaption>
-
-            </figure>
 
         </section>
 
@@ -901,15 +1000,15 @@
             <p class="project-hero-description"
                style="margin-left: 0;">
 
-                Worked with Docker-based application
-                containerization, including Dockerfiles, image
-                creation, container networking, and Docker Swarm
-                deployments.
+                Worked with Docker-based application containerization,
+                including Dockerfiles, image creation, container
+                networking, and Docker Swarm deployments.
 
             </p>
 
 
             <div class="technical-list">
+
 
                 <div>
 
@@ -966,20 +1065,8 @@
 
                 </div>
 
+
             </div>
-
-
-            <figure class="project-image">
-
-                <img src="../../projects/images/ge-docker.png"
-                     alt="Sanitized Docker containerization and deployment environment">
-
-                <figcaption>
-                    Docker-based containerization and deployment
-                    workflow used within the enterprise environment.
-                </figcaption>
-
-            </figure>
 
         </section>
 
@@ -1014,6 +1101,7 @@
 
 
             <div class="technical-list">
+
 
                 <div>
 
@@ -1056,21 +1144,8 @@
 
                 </div>
 
+
             </div>
-
-
-            <figure class="project-image">
-
-                <img src="../../projects/images/ge-kubernetes.png"
-                     alt="Sanitized Kubernetes deployment showing application workloads and services">
-
-                <figcaption>
-                    Sanitized Kubernetes deployment environment
-                    showing application workloads and service
-                    configuration.
-                </figcaption>
-
-            </figure>
 
         </section>
 
@@ -1097,14 +1172,16 @@
             <p class="project-hero-description"
                style="margin-left: 0;">
 
-                Integrated application quality and security
-                validation into enterprise software delivery
-                workflows using SonarQube, Black Duck, and Fortify.
+                Supported application quality and security validation
+                within enterprise software delivery workflows using
+                SonarQube, Black Duck, Fortify, and security scanning
+                processes.
 
             </p>
 
 
             <div class="concept-grid">
+
 
                 <div class="concept-card">
 
@@ -1148,27 +1225,15 @@
 
                 </div>
 
+
             </div>
-
-
-            <figure class="project-image">
-
-                <img src="../../projects/images/ge-security-quality.png"
-                     alt="Sanitized application security and code quality scanning workflow">
-
-                <figcaption>
-                    Application quality and security validation
-                    integrated into the enterprise delivery lifecycle.
-                </figcaption>
-
-            </figure>
 
         </section>
 
 
 
         <!-- =====================================================
-             JFrog
+             Artifact Management
              ===================================================== -->
 
         <section class="project-section">
@@ -1188,23 +1253,45 @@
             <p class="project-hero-description"
                style="margin-left: 0;">
 
-                Managed application artifacts using JFrog Artifactory
-                as part of the enterprise software delivery lifecycle.
+                Worked with JFrog Artifactory for application artifact
+                management as part of the enterprise software delivery
+                lifecycle.
 
             </p>
 
 
-            <figure class="project-image">
+            <div class="technical-list">
 
-                <img src="../../projects/images/ge-artifactory.png"
-                     alt="Sanitized JFrog Artifactory application artifact repository">
 
-                <figcaption>
-                    Sanitized representation of application artifact
-                    management using JFrog Artifactory.
-                </figcaption>
+                <div>
 
-            </figure>
+                    <strong>
+                        Artifact Storage
+                    </strong>
+
+                    <span>
+                        Supported storage and retrieval of application
+                        build artifacts.
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        CI/CD Integration
+                    </strong>
+
+                    <span>
+                        Worked with artifact repositories as part of
+                        automated application delivery workflows.
+                    </span>
+
+                </div>
+
+
+            </div>
 
         </section>
 
@@ -1238,6 +1325,7 @@
 
 
             <div class="technical-list">
+
 
                 <div>
 
@@ -1280,20 +1368,8 @@
 
                 </div>
 
+
             </div>
-
-
-            <figure class="project-image">
-
-                <img src="../../projects/images/ge-grafana.png"
-                     alt="Sanitized Grafana operational monitoring dashboard">
-
-                <figcaption>
-                    Sanitized Grafana monitoring dashboard used for
-                    operational visibility and reporting.
-                </figcaption>
-
-            </figure>
 
         </section>
 
@@ -1329,6 +1405,7 @@
 
 
             <div class="concept-grid">
+
 
                 <div class="concept-card">
 
@@ -1372,21 +1449,8 @@
 
                 </div>
 
+
             </div>
-
-
-            <figure class="project-image">
-
-                <img src="../../projects/images/ge-sre-monitoring.png"
-                     alt="Sanitized SRE production readiness and service level monitoring workflow">
-
-                <figcaption>
-                    Sanitized representation of SRE-oriented
-                    production readiness and service-level
-                    validation activities.
-                </figcaption>
-
-            </figure>
 
         </section>
 
@@ -1410,7 +1474,9 @@
 
             </div>
 
+
             <ul class="project-list">
+
 
                 <li>
                     Maintained CI/CD pipelines supporting application
@@ -1418,15 +1484,18 @@
                     environments.
                 </li>
 
+
                 <li>
                     Supported Linux-based Jenkins infrastructure and
                     distributed build environments.
                 </li>
 
+
                 <li>
                     Worked with Git-based source control and Maven-based
                     Java application builds.
                 </li>
+
 
                 <li>
                     Supported application deployment and
@@ -1434,19 +1503,23 @@
                     Apache Tomcat environments.
                 </li>
 
+
                 <li>
                     Worked with Docker and Kubernetes for
                     containerized application deployment.
                 </li>
 
+
                 <li>
                     Supported cloud infrastructure across AWS and GCP.
                 </li>
+
 
                 <li>
                     Used Terraform for Infrastructure as Code in
                     GCP-managed environments.
                 </li>
+
 
                 <li>
                     Worked with application security and code quality
@@ -1454,20 +1527,24 @@
                     Fortify.
                 </li>
 
+
                 <li>
                     Managed application artifacts using JFrog
                     Artifactory.
                 </li>
+
 
                 <li>
                     Supported operational monitoring using Grafana
                     dashboards and MySQL data.
                 </li>
 
+
                 <li>
                     Participated in SRE onboarding, service-level
                     validation, and production readiness activities.
                 </li>
+
 
             </ul>
 
@@ -1492,6 +1569,7 @@
                 </h2>
 
             </div>
+
 
             <div class="project-technologies large">
 
@@ -1557,6 +1635,7 @@
                 Building Reliable Application Platforms
             </h2>
 
+
             <p>
 
                 Over 5+ years of professional experience, I have
@@ -1567,6 +1646,7 @@
 
             </p>
 
+
             <p>
 
                 This experience has provided hands-on exposure to
@@ -1575,6 +1655,7 @@
                 secure software environments.
 
             </p>
+
 
             <div class="project-actions"
                  style="justify-content: center;">
@@ -1592,6 +1673,7 @@
             </div>
 
         </section>
+
 
     </main>
 
