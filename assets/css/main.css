@@ -1171,13 +1171,13 @@ section {
 
 .project-page {
     max-width: var(--max-width);
-    margin: 0 auto;
-    padding: -10px 30px;
+    margin: 0 auto 0;
+    padding: 0px 30px;
 }
 
 .project-hero {
     max-width: 900px;
-    margin: 0 auto 80px;
+    margin: 0 auto 0;
     text-align: center;
 }
 
@@ -1197,7 +1197,7 @@ section {
 }
 
 .project-section {
-    margin-bottom: 90px;
+    margin-bottom: 0px;
 }
 
 .project-content {
